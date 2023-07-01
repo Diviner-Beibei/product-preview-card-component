@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Preview Card Component</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <main class="product">
+    <picture class="product__img">
+      <source srcset="images/image-product-desktop.jpg" media="(min-width: 37em)">
+      <img srcset="images/image-product-mobile.jpg" alt="product image">
+    </picture>
+
+    <div class="product__summery">
+      <p class="product__summery--category">perfume</p>
+      <h2 class="product__summery--title">Gabrielle Essence Eau De Parfum</h2>
+      <p class="product__summery--text">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House
+        of CHANEL
+      </p>
+      <div class="product__summery--price">
+        <span class="product__summery--price-cur">$149.99</span>
+        <span class="product__summery--price-pre">$169.99</span>
+      </div>
+      <a href="#" class="btn">Add to Cart</a>
+    </div>
+  </main>
+</body>
+
+</html>

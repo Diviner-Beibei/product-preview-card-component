@@ -1,0 +1,130 @@
+
+:root {
+  --color-primary-dark-cyan:hsl(158, 36%, 37%);
+  --color-primary-deep-dark-cyan:hsl(158, 36%, 20%);
+  --color-primary-cream:hsl(30, 38%, 92%);
+
+  --color-neutral-very-dark-blue:hsl(212, 21%, 14%);
+  --color-neutral-dark-grayish-blue:hsl(228, 12%, 48%);
+  --color-neutral-white:hsl(0, 0%, 100%);
+
+  --ff-fraunces: "Fraunces", serif;
+  --ff-montserrat: "Montserrat", sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.4rem;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: var(--color-primary-cream);
+}
+
+img,
+picture,
+svg{
+  display: block;
+  max-width: 100%;
+}
+
+.product{
+  display: grid;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  max-width: 60rem;
+  background-color: var(--color-neutral-white);
+  margin: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .product{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product__summery{
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: var(--ff-montserrat);
+  color: var(--color-neutral-dark-grayish-blue);
+}
+
+@media (min-width: 600px) {
+  .product__summery{
+    padding: 3.2rem;
+    gap: 1.6rem;
+  }
+}
+
+.product__summery--category {
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.product__summery--title{
+  font-size: 3.2rem;
+  font-family: var(--ff-fraunces);
+  color: var(--color-neutral-very-dark-blue);
+  line-height: 1;
+}
+
+.product__summery--text{
+  line-height: 1.7;
+}
+
+.product__summery--text,
+.product__summery--price-pre{
+  font-weight: 500;
+}
+
+.product__summery--price-pre{
+  text-decoration: line-through;
+}
+
+.product__summery--price{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.product__summery--price-cur{
+  font-size: 3.2rem;
+  color: var(--color-primary-dark-cyan);
+  font-family: var(--ff-fraunces);
+}
+
+.btn{
+  font-weight: 700;
+  background-color: var(--color-primary-dark-cyan);
+  border-radius: 0.8rem;
+  color: var(--color-neutral-white);
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn::before{
+  content: "";
+  background-image: url("images/icon-cart.svg");
+  width: 1.5rem;
+  height: 1.6rem;
+}
+
+.btn:hover,
+.btn:focus{
+  background-color: var(--color-primary-deep-dark-cyan);
+}
